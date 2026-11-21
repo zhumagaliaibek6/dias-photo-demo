@@ -1,7 +1,7 @@
 (function(){
 var home=document.body.dataset.home==='1'?'':'index.html';
 var h=document.createElement('header');h.className='hd';
-h.innerHTML='<a class="brand" href="index.html">Photo <i>Live</i></a><button class="burger" aria-label="Меню">Меню</button><nav class="menu"><a href="'+home+'#services">Услуги</a><a href="'+home+'#works">Работы</a><a href="'+home+'#album">QR-альбом</a><a href="'+home+'#contact">Контакты</a><a class="wa" href="https://wa.me/77715937551" target="_blank" rel="noopener">WhatsApp</a></nav>';
+h.innerHTML='<a class="brand" href="index.html">Photo <i>Life</i></a><button class="burger" aria-label="Меню">Меню</button><nav class="menu"><a href="'+home+'#services">Услуги</a><a href="'+home+'#works">Работы</a><a href="'+home+'#album">QR-альбом</a><a href="'+home+'#contact">Контакты</a><a class="wa" href="https://wa.me/77715937551" target="_blank" rel="noopener">WhatsApp</a></nav>';
 document.body.prepend(h);
 var m=h.querySelector('.menu');
 h.querySelector('.burger').onclick=function(){m.classList.toggle('o')};

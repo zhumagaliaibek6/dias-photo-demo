@@ -1,5 +1,5 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Photo Live — фотограф и видеограф в Атбасаре</title>
+<title>Photo Life — фотограф и видеограф в Атбасаре</title>
 <meta name="description" content="Свадьбы, қыз ұзату, юбилеи, тұсау кесер. Фото и видео в Атбасаре и по региону. QR-альбом для гостей.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:wght@400;500;600&family=Prata&display=swap" rel="stylesheet">
@@ -39,6 +39,14 @@ h2{font-size:clamp(34px,6vw,84px);line-height:1.04;letter-spacing:-.015em;margin
 @media(min-width:760px){.strip .fr{width:auto;max-width:none;height:min(56vh,520px)}.strip .fr:nth-child(4n){width:auto;height:min(44vh,400px)}}
 .strip::after{content:'';flex:none;width:1px}
 .hint{font-size:12px;color:var(--mut);margin-top:10px}
+.ig{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:clamp(18px,5vw,64px);padding:8px clamp(18px,5vw,64px) 22px;margin-top:clamp(24px,4vw,44px);align-items:flex-start;scrollbar-width:none}
+.ig::-webkit-scrollbar{display:none}
+.ig::after{content:'';flex:none;width:1px}
+.igi{flex:none;width:min(84vw,360px);scroll-snap-align:start;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 18px 50px rgba(60,40,10,.12),0 0 0 1px rgba(42,32,23,.06);min-height:420px}
+.igi .instagram-media,.igi iframe{margin:0!important;min-width:0!important;max-width:none!important;width:100%!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.igi blockquote.instagram-media{display:flex;align-items:center;justify-content:center;min-height:420px;background:linear-gradient(160deg,#efe3cb,#d4c09a)}
+.igi blockquote a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#2a2017}
+.igf{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .al{border-block:1px solid var(--line)}
 .alg{display:grid;gap:clamp(36px,6vw,90px);align-items:center}
 @media(min-width:860px){.alg{grid-template-columns:1.1fr .9fr}}
@@ -55,11 +63,11 @@ h2{font-size:clamp(34px,6vw,84px);line-height:1.04;letter-spacing:-.015em;margin
 <header class="hero" id="top">
 <img src="img/hero.jpg" alt="" onerror="this.remove()"><div class="band"></div>
 <div class="wrap">
-<div class="eyebrow">Фото и видео · Атбасар</div>
+<div class="eyebrow">Фото · Видео · Монтаж · Атбасар</div>
 <h1 class="serif">Праздник,<br>который <em>остаётся</em></h1>
 <div class="hmeta">
 <div>Свадьбы, қыз ұзату, юбилеи, тұсау кесер. Снимаем так, чтобы через годы смотреть было так же тепло.</div>
-<div><b>Атбасар</b>и выезд по региону</div>
+<div><b>Диас Аманжолов</b>Атбасар и выезд по региону</div>
 <div><a class="lnk" href="https://wa.me/77715937551" target="_blank" rel="noopener">Написать в WhatsApp <span>→</span></a></div>
 </div></div>
 </header>
@@ -77,8 +85,9 @@ h2{font-size:clamp(34px,6vw,84px);line-height:1.04;letter-spacing:-.015em;margin
 
 <section id="works" style="padding-top:0"><div class="wrap">
 <div class="eyebrow rv">Портфолио</div><h2 class="serif rv">Работы</h2></div>
-<div class="strip" id="strip"></div>
-<div class="wrap"><div class="hint">Листайте → · больше работ в Instagram <a href="https://instagram.com/photo.life_atbasar" target="_blank" rel="noopener" style="color:var(--gold)">@photo.life_atbasar</a></div></div>
+<div class="wrap"><p class="rv" style="color:var(--mut);max-width:520px;margin-top:14px">Свежие съёмки прямо из нашего Instagram — свадьбы, юбилеи и семейные праздники Атбасара.</p></div>
+<div class="ig" id="ig"></div>
+<div class="wrap igf"><span class="hint">Листайте →</span><a class="lnk" href="https://www.instagram.com/photo.life_atbasar/" target="_blank" rel="noopener">Все работы в Instagram →</a></div>
 </section>
 
 <section class="al dk" id="album"><div class="wrap alg">
@@ -97,13 +106,14 @@ h2{font-size:clamp(34px,6vw,84px);line-height:1.04;letter-spacing:-.015em;margin
 <a class="big serif rv" href="https://wa.me/77715937551" target="_blank" rel="noopener">Написать в WhatsApp →</a>
 <div class="row rv"><div><b>+7 771 593 75 51</b>WhatsApp</div><div><b>@photo.life_atbasar</b>Instagram</div><div><b>Атбасар</b>выезд по региону</div></div>
 </div></section>
-<footer class="dk"><span>© Photo Live, Атбасар</span><span>Сайт и QR-альбом — Aibek</span></footer>
+<footer class="dk"><span>© Photo Life, Атбасар</span><span>Сайт и QR-альбом — Aibek</span></footer>
 <script src="common.js"></script>
 <script>
-var cats=['Свадьба','Қыз ұзату','Юбилей','Тұсау кесер','Свадьба','Выезд','Юбилей','Свадьба'];
-var st=document.getElementById('strip');
-cats.forEach(function(c,i){var d=document.createElement('div');d.className='fr';d.dataset.n=('0'+(i+1)).slice(-2);d.dataset.c=c;
-d.style.background='linear-gradient('+(120+i*23)+'deg,#efe3cb,#d4c09a 85%)';
-d.innerHTML='<img src="img/work-'+(i+1)+'.jpg" alt="'+c+'" loading="lazy" onerror="this.remove()">';st.appendChild(d)});
+// official Instagram embeds of the studio's own posts (content stays on Instagram)
+var posts=['Df1QkNOii6U','Df1OXxsCtJG','Df1R9FxCvDP','Df1L5Tkij97','Df1Mo4vijOy','Df1OPtiihXp','Dfq-rvIioKh','DTpv7pyDOwR'];
+var ig=document.getElementById('ig');
+posts.forEach(function(id){var u='https://www.instagram.com/p/'+id+'/';var d=document.createElement('div');d.className='igi';
+d.innerHTML='<blockquote class="instagram-media" data-instgrm-permalink="'+u+'?utm_source=ig_embed" data-instgrm-version="14"><a href="'+u+'" target="_blank" rel="noopener">Смотреть в Instagram</a></blockquote>';ig.appendChild(d)});
+var s=document.createElement('script');s.async=true;s.src='https://www.instagram.com/embed.js';document.body.appendChild(s);
 buildCard(document.getElementById('cardbox'),{names:'Нұрлан & Айгерім',date:'00 . 00 . 2027',occ:'toy'});
 </script></body></html>
