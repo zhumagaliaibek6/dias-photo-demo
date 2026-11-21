@@ -1,0 +1,106 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Photo Live — фотограф и видеограф в Атбасаре</title>
+<meta name="description" content="Свадьбы, қыз ұзату, юбилеи, тұсау кесер. Фото и видео в Атбасаре и по региону. QR-альбом для гостей.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:wght@400;500;600&family=Prata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(28px,6vh,60px);overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(55% 45% at 80% 30%,rgba(164,125,44,.22),transparent 70%),radial-gradient(40% 35% at 10% 80%,rgba(164,125,44,.10),transparent 70%)}
+.hero .band{position:absolute;left:0;right:0;top:84px;opacity:.75}
+.hero .wrap{position:relative;width:100%}
+.hero h1{font-size:clamp(46px,11.5vw,168px);line-height:.98;letter-spacing:-.02em;margin:18px 0 0}
+.hero h1 em{font-family:var(--script);font-style:normal;color:var(--gold);font-size:1.12em}
+.hmeta{display:grid;gap:18px;margin-top:clamp(28px,6vh,56px);padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+@media(min-width:760px){.hmeta{grid-template-columns:1.2fr 1fr 1fr;align-items:end}}
+.hmeta b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.mq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;background:var(--bg2)}
+.mq div{display:inline-block;animation:mq 38s linear infinite;font-family:var(--serif);font-size:clamp(22px,3.4vw,40px);color:var(--mut)}
+.mq span{margin:0 28px;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:clamp(70px,12vw,150px) 0}
+h2{font-size:clamp(34px,6vw,84px);line-height:1.04;letter-spacing:-.015em;margin-top:16px}
+.svc{margin-top:clamp(36px,6vw,80px);border-top:1px solid var(--line)}
+.sv{display:grid;grid-template-columns:48px 1fr;gap:6px 12px;padding:26px 0;border-bottom:1px solid var(--line);transition:padding .35s,background .35s}
+.sv .n{font-family:var(--serif);color:var(--gold);font-size:14px;padding-top:10px}
+.sv h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4.6vw,58px);line-height:1.1}
+.sv p{color:var(--mut);max-width:520px;font-size:15px}
+.sv .pr{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:8px;font-weight:600}
+@media(min-width:820px){.sv{grid-template-columns:70px 1.2fr 1fr 150px;align-items:center;gap:20px}.sv .pr{margin:0;text-align:right}.sv:hover{padding-left:18px;background:linear-gradient(90deg,rgba(164,125,44,.10),transparent)}}
+.sv h3,.sv p,.sv .pr{grid-column:2}
+@media(min-width:820px){.sv h3{grid-column:2}.sv p{grid-column:3}.sv .pr{grid-column:4}}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(18px,5vw,64px) 18px;margin-top:clamp(30px,5vw,60px);scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.strip .fr{flex:none;scroll-snap-align:start;height:min(62vh,560px);aspect-ratio:4/5}
+.strip .fr:nth-child(3n+2){aspect-ratio:3/4}
+.strip .fr:nth-child(4n){aspect-ratio:1/1;height:min(48vh,440px);align-self:flex-end}
+.hint{font-size:12px;color:var(--mut);margin-top:10px}
+.al{border-block:1px solid var(--line)}
+.alg{display:grid;gap:clamp(36px,6vw,90px);align-items:center}
+@media(min-width:860px){.alg{grid-template-columns:1.1fr .9fr}}
+.steps{margin:30px 0 34px;border-top:1px solid var(--line)}
+.steps li{list-style:none;display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.steps b{font-family:var(--serif);font-weight:400;color:var(--gold);min-width:26px}
+.btns{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center}
+#cardbox .tc{transform:rotate(-1.5deg)}
+.ct a.big{display:block;font-family:var(--serif);font-size:clamp(38px,9vw,140px);line-height:1.05;margin-top:24px;letter-spacing:-.02em;transition:color .3s}
+.ct a.big:hover{color:var(--gold)}
+.ct .row{display:flex;gap:clamp(24px,5vw,70px);flex-wrap:wrap;margin-top:44px;font-size:14px;color:var(--mut)}
+.ct .row b{display:block;color:var(--ink);font-weight:600;font-size:15px}
+</style></head><body data-home="1">
+<header class="hero" id="top">
+<img src="img/hero.jpg" alt="" onerror="this.remove()"><div class="band"></div>
+<div class="wrap">
+<div class="eyebrow">Фото и видео · Атбасар</div>
+<h1 class="serif">Праздник,<br>который <em>остаётся</em></h1>
+<div class="hmeta">
+<div>Свадьбы, қыз ұзату, юбилеи, тұсау кесер. Снимаем так, чтобы через годы смотреть было так же тепло.</div>
+<div><b>Атбасар</b>и выезд по региону</div>
+<div><a class="lnk" href="https://wa.me/77715937551" target="_blank" rel="noopener">Написать в WhatsApp <span>→</span></a></div>
+</div></div>
+</header>
+<div class="mq" aria-hidden="true"><div>Свадьбы<span>✦</span>Қыз ұзату<span>✦</span>Юбилеи<span>✦</span>Тұсау кесер<span>✦</span>Выезд по региону<span>✦</span>Свадьбы<span>✦</span>Қыз ұзату<span>✦</span>Юбилеи<span>✦</span>Тұсау кесер<span>✦</span>Выезд по региону<span>✦</span></div></div>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow rv">Услуги</div><h2 class="serif rv">Что мы снимаем</h2>
+<div class="svc">
+<div class="sv rv"><div class="n">01</div><h3>Свадьбы</h3><p>Весь день от сборов до первого танца. Фото и видео.</p><div class="pr">по запросу</div></div>
+<div class="sv rv"><div class="n">02</div><h3>Қыз ұзату</h3><p>Прощание с родным домом, семейные и самые тёплые моменты.</p><div class="pr">по запросу</div></div>
+<div class="sv rv"><div class="n">03</div><h3>Юбилеи</h3><p>Праздники для близких: живые эмоции, без лишней постановки.</p><div class="pr">по запросу</div></div>
+<div class="sv rv"><div class="n">04</div><h3>Тұсау кесер</h3><p>Первые шаги малыша — семейный праздник на память.</p><div class="pr">по запросу</div></div>
+<div class="sv rv"><div class="n">05</div><h3>Выезд по региону</h3><p>Приезжаем в районы и соседние населённые пункты.</p><div class="pr">по запросу</div></div>
+</div></div></section>
+
+<section id="works" style="padding-top:0"><div class="wrap">
+<div class="eyebrow rv">Портфолио</div><h2 class="serif rv">Работы</h2></div>
+<div class="strip" id="strip"></div>
+<div class="wrap"><div class="hint">Листайте → · больше работ в Instagram <a href="https://instagram.com/photo.life_atbasar" target="_blank" rel="noopener" style="color:var(--gold)">@photo.life_atbasar</a></div></div>
+</section>
+
+<section class="al dk" id="album"><div class="wrap alg">
+<div>
+<div class="eyebrow rv">Дополнительная услуга</div>
+<h2 class="serif rv">QR-альбом<br>для ваших гостей</h2>
+<p class="rv" style="color:var(--mut);margin-top:20px;max-width:480px">Гости снимают праздник на свои телефоны — а вы получаете все эти кадры и видео в одном месте, вместе с основной съёмкой. Карточка на стол оформляется под ваше торжество: имена, приветствие на казахском.</p>
+<ol class="steps rv"><li><b>01</b>Карточка с QR стоит на каждом столе</li><li><b>02</b>Гость наводит камеру — приложения и регистрация не нужны</li><li><b>03</b>Фото и видео собираются в общий альбом мероприятия</li></ol>
+<div class="btns rv"><a class="lnk solid" href="qr-card.html">Оформить карточку</a><a class="lnk" href="album.html">Как видит гость →</a><a class="lnk" href="cabinet.html">Как видит фотограф →</a></div>
+</div>
+<div class="rv"><div id="cardbox"></div></div>
+</div></section>
+
+<section class="ct" id="contact"><div class="wrap">
+<div class="eyebrow rv">Контакты</div><h2 class="serif rv">Расскажите о вашем дне</h2>
+<a class="big serif rv" href="https://wa.me/77715937551" target="_blank" rel="noopener">Написать в WhatsApp →</a>
+<div class="row rv"><div><b>+7 771 593 75 51</b>WhatsApp</div><div><b>@photo.life_atbasar</b>Instagram</div><div><b>Атбасар</b>выезд по региону</div></div>
+</div></section>
+<footer class="dk"><span>© Photo Live, Атбасар</span><span>Сайт и QR-альбом — Aibek</span></footer>
+<script src="common.js"></script>
+<script>
+var cats=['Свадьба','Қыз ұзату','Юбилей','Тұсау кесер','Свадьба','Выезд','Юбилей','Свадьба'];
+var st=document.getElementById('strip');
+cats.forEach(function(c,i){var d=document.createElement('div');d.className='fr';d.dataset.n=('0'+(i+1)).slice(-2);d.dataset.c=c;
+d.style.background='linear-gradient('+(120+i*23)+'deg,#efe3cb,#d4c09a 85%)';
+d.innerHTML='<img src="img/work-'+(i+1)+'.jpg" alt="'+c+'" loading="lazy" onerror="this.remove()">';st.appendChild(d)});
+buildCard(document.getElementById('cardbox'),{names:'Нұрлан & Айгерім',date:'00 . 00 . 2027',occ:'toy'});
+</script></body></html>
